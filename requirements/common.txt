@@ -1,0 +1,5 @@
+# requirements/common.txt
+
+Django==1.4.2
+South==0.7.6
+django-debug-toolbar==0.9.4

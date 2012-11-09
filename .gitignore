@@ -1,0 +1,23 @@
+# Eclipse specific files
+/.project
+/.settings
+/.buildpath
+
+# Pycharm spefific files
+/.idea
+
+# Text editor backup copies
+*~
+
+# VI swap files
+*.swp
+
+# All phpcore directories
+phpcore
+phpcore/
+
+# Python compiled files
+*.pyc
+
+# Config DEV
+dev.py

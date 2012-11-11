@@ -1,2 +1,4 @@
 .idea/*
 *.pyc
+.ftpquota
+manage.py

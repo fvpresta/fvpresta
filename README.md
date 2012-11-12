@@ -27,3 +27,8 @@ Environement -----------------------------------------
 - This config is done in manage.py and fvresta.fcgi
 
 When run if PROD via fastCGI, the config  will be charged with DJANGO_SETTINGS_MODULE = settings.prod
+
+
+- For having the separated environnement:
+  + If there are files accidently added into GIT so need to use command
+    rm --cached file for remove from git and then add the file to .gitignore to ignore it

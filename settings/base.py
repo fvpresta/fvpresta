@@ -70,6 +70,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'apps.common',
     'apps.cms',
+    'south',
+    'debug_toolbar',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -105,9 +107,17 @@ LOGGING = {
         }
 }
 
-# debug_toolar ---------------------------------------------------------------------------------------------------------
-INSTALLED_APPS += ('debug_toolbar',)
+# Added
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+)
 
+# debug_toolar ---------------------------------------------------------------------------------------------------------
 MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
@@ -137,6 +147,3 @@ DEBUG_TOOLBAR_CONFIG = {
     'ENABLE_STACKTRACES' : True,
     'SHOW_TEMPLATE_CONTEXT': True,
 }
-
-# south ----------------------------------------------------------------------------------------------------------------
-INSTALLED_APPS += ('south',)

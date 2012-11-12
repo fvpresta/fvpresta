@@ -21,3 +21,9 @@ CSS ---------------------------------------------------
 
 Template ---------------------------------------------
 - Block name: this-is-block-name
+
+Environement -----------------------------------------
+- Each environnement has its setting file: Production: PROD, Developpement: DEV
+- This config is done in manage.py and fvresta.fcgi
+
+When run if PROD via fastCGI, the config  will be charged with DJANGO_SETTINGS_MODULE = settings.prod

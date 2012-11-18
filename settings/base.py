@@ -1,5 +1,7 @@
 # Django settings for fvpresta project.
 
+from apps.cms.settings import *
+
 ADMINS = (
 # ('Admin presta', 'tronghieu.ha@fvpresta.com'),
 )
@@ -68,15 +70,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'south', # south must be here for Pycharm's task manager
+    'django.contrib.admin',
+    'django.contrib.admindocs',
     'apps.common',
     'apps.cms',
-    'south',
-    'debug_toolbar',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
-    )
+)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -118,6 +117,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 # debug_toolar ---------------------------------------------------------------------------------------------------------
+INSTALLED_APPS += ('debug_toolbar',)
+
 MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
@@ -134,16 +135,28 @@ DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.sql.SQLDebugPanel',
     'debug_toolbar.panels.signals.SignalDebugPanel',
     'debug_toolbar.panels.logger.LoggingPanel',
-    )
+)
 
 def showToolbar(request):
     return True  # Always show toolbar, for example purposes only.
 
 DEBUG_TOOLBAR_CONFIG = {
-    'INTERCEPT_REDIRECTS': True,
+    'INTERCEPT_REDIRECTS': False,
     'SHOW_TOOLBAR_CALLBACK': showToolbar,
     'HIDE_DJANGO_SQL': False,
     'TAG': 'div',
     'ENABLE_STACKTRACES' : True,
     'SHOW_TEMPLATE_CONTEXT': True,
+}
+
+# easy_thumbnails ------------------------------------------------------------------------------------------------------
+INSTALLED_APPS += ('easy_thumbnails',)
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'logo_big':      {'size': (220, 80), 'crop': False},
+        'logo_small':    {'size': (110, 40), 'crop': False},
+        'capture_big':   {'size': (220, 80), 'crop': False},
+        'capture_small': {'size': (110, 40), 'crop': False},
+    },
 }

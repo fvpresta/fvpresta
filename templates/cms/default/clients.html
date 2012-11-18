@@ -1,0 +1,52 @@
+{% extends 'cms/cms_base.html' %}
+
+{% load thumbnail %}
+
+{% block right-content %}
+<div id="clients">
+    {% for client in clients %}
+        <div class="row thumbnails">
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo|thumbnail_url:'logo_big' }}" title="{{ client.name }}" alt="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+        </div>
+        <div class="row thumbnails">
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo|thumbnail_url:'logo_big' }}" title="{{ client.name }}" alt="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+        </div>
+        <div class="row thumbnails">
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo|thumbnail_url:'logo_big' }}" title="{{ client.name }}" alt="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+            <div class="span2 thumbnail">
+                <img src="{{ client.logo.url }}" title="{{ client.name }}" />
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

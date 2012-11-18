@@ -7,16 +7,17 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'apps.cms.views.home', name = 'cms_home')
-    # Examples:
-    # url(r'^$', 'fvpresta.views.home', name='home'),
-    # url(r'^fvpresta/', include('fvpresta.foo.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+)
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+# CMS
+urlpatterns += patterns('apps.cms.views',
+    url(r'^$',         'home',      name = 'cms_home'),
+    url(r'^about_us',  'aboutUs',   name = 'cms_about_us'),
+    url(r'^clients',   'clients',   name = 'cms_clients'),
+    url(r'^portfolio', 'portfolio', name = 'cms_portfolio'),
+    url(r'^contact',   'contact',   name = 'cms_contact'),
 )
 
 if settings.DEBUG:

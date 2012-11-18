@@ -5,16 +5,22 @@
 {% endblock%}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="offset2 span1">
-            <h2>FVPRESTA</h2>
+<div class="container">
+    <div class="row">
+        <div class="span2">
+            <h1 id="logo">FVPRESTA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2">
             <!-- Left menu -->
             {% include 'cms/_left_menu.html' %}
             <!-- /Left menu -->
         </div>
-        <div class="span7">
+        <div class="span10">
+            <!-- Right content -->
             {% block right-content %}{% endblock %}
+            <!-- /Right content -->
         </div>
     </div>
 </div>

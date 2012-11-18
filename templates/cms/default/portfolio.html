@@ -1,0 +1,14 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block right-content %}
+<div class="row">
+    {% for project in projects %}
+        <div class="span3">
+            {% with project.captures.all|first as first_capture %}
+                <img src="{{ first_capture.image.url }}" />
+            {% endwith %}
+            {{ project.name }}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

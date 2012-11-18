@@ -1,0 +1,39 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block right-content %}
+    <div class="row">
+        <div class="span10">
+            <div id="myCarousel" class="carousel slide">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <img src="{{ STATIC_URL }}cms/img/home1.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{{ STATIC_URL }}cms/img/home2.jpg" alt="">
+                    </div>
+                </div>
+                <!-- /Carousel items -->
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                <!-- /Carousel nav -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span3">
+            <h3>Who we are?</h3>
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+        </div>
+        <div class="span3">
+            <h3>Our service</h3>
+            <p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie</p>
+        </div>
+        <div class="span3">
+            <h3>This is head 1</h3>
+            <p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie</p>
+        </div>
+    </div>
+{% endblock %}

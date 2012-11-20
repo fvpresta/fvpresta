@@ -1,11 +1,13 @@
 # coding=utf8
 
 from django.template import RequestContext
-from django.shortcuts import render_to_response
-from apps.cms.models import Project, Client
+from django.shortcuts import render_to_response, get_list_or_404
+from apps.cms.models import Project, Client, Carousel
 
 def home(request):
-    return render_to_response('cms/default/home.html', {}, RequestContext(request))
+    carousels = get_list_or_404(Carousel)
+
+    return render_to_response('cms/default/home.html', {'carousels': carousels}, RequestContext(request))
 
 def clients(request):
     clients = Client.objects.all()

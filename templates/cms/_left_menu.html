@@ -1,7 +1,7 @@
 <ul id="left_menu" class="nav nav-list">
-    <li><a href="{% url cms_home %}">{% if request.view_name == 'cms_home' %}> {% endif %}Home</a></li>
-    <li><a href="{% url cms_about_us %}">{% if request.view_name == 'cms_about_us' %}> {% endif %}About us</a></li>
-    <li><a href="{% url cms_portfolio %}">{% if request.view_name == 'cms_portfolio' %}> {% endif %}Portfolio</a></li>
-    <li><a href="{% url cms_clients %}">{% if request.view_name == 'cms_clients' %}> {% endif %}Clients</a></li>
-    <li><a href="{% url cms_contact %}">{% if request.view_name == 'cms_contact' %}> {% endif %}Contacts</a></li>
+    <li><a href="{% url cms_home %}" {% if request.view_name == 'cms_home' %}class="active"{% endif %}>Home</a></li>
+    <li><a href="{% url cms_about_us %}" {% if request.view_name == 'cms_about_us' %}class="active"{% endif %}>About us</a></li>
+    <li><a href="{% url cms_portfolio %}" {% if request.view_name == 'cms_portfolio' %}class="active"{% endif %}>Portfolio</a></li>
+    <li><a href="{% url cms_clients %}" {% if request.view_name == 'cms_clients' %}class="active"{% endif %}>Clients</a></li>
+    <li><a href="{% url cms_contact %}" {% if request.view_name == 'cms_contact' %}class="active"{% endif %}>Contacts</a></li>
 </ul>

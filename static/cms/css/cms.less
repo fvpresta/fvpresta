@@ -3,8 +3,8 @@
 body {
   font-family: Arial;
   font-size: 14px;
-  background-image: url('@{static_url}/cms/img/bg.png');
   color: #dddddd;
+  background-image: url('@{static_url}/cms/img/cms_base_bg.png');
 }
 
 #logo {
@@ -19,6 +19,9 @@ body {
       color: #FFFFFF;
       text-decoration: none;
       border-bottom: 1px dashed #555555;
+      &.active {
+        border-bottom:  1px solid #CCCCCC;
+      }
       &:hover {
         background-color: #222222;
       }

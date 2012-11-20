@@ -18,3 +18,6 @@ class Capture(models.Model):
     project = models.ForeignKey(Project, related_name = 'captures')
     image = models.ImageField(upload_to = 'cms/captures')
 
+class Carousel(models.Model):
+    image = models.ImageField(upload_to = 'cms/carousel')
+

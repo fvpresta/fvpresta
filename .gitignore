@@ -4,3 +4,4 @@
 manage.py
 dev.py
 prod.py
+media/*

@@ -3,4 +3,4 @@
 .ftpquota
 manage.py
 prod.py
-media/*
+www/media/*

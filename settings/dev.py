@@ -27,7 +27,7 @@ STATICFILES_DIRS = (
 )
 
 
-MEDIA_ROOT = PROJECT_ROOT_PATH + '/media' # Example: "/home/media/media.lawrence.com/media/"
+MEDIA_ROOT = PROJECT_ROOT_PATH + 'www/media' # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_URL = '/media/' # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 STATIC_ROOT = '' # Example: "/home/media/media.lawrence.com/static/"
 STATIC_URL = '/static/' # Example: "http://media.lawrence.com/static/"

@@ -161,7 +161,7 @@ THUMBNAIL_ALIASES = {
         'logo_small':     {'size': (110, 35),  'crop': False},
         'capture_big':    {'size': (220, 70),  'crop': False},
         'capture_small':  {'size': (110, 35),  'crop': False},
-        'carousel_big':   {'size': (780, 260), 'crop': True},
-        'carousel_small': {'size': (156, 52), 'crop': False},
+        'carousel_big':   {'size': (970, 260), 'crop': True},
+        'carousel_small': {'size': (156, 52),  'crop': False},
     },
 }

@@ -16,7 +16,7 @@
             <div class="span3 thumbnail client-logo">
                 <img src="{{ client.logo|thumbnail_url:'logo_big' }}" title="{{ client.name }}" alt="{{ client.name }}" />
             </div>
-        {% if forloop.last or forloop.counter|divisibleby:"4" %}</div>{% endif %}
+        {% if forloop.last or forloop.counter|divisibleby:"3" %}</div>{% endif %}
     {% endfor %}
 </div>
 {% endblock %}

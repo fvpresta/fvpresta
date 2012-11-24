@@ -5,7 +5,9 @@ from apps.cms.models import Client, Project, Capture, Carousel
 from easy_thumbnails.files import get_thumbnailer
 
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('name', 'logoThumb')
+    list_display = ('display_order', 'name', 'url', 'logoThumb')
+    list_display_links = ('name',)
+    list_editable = ('display_order',)
 
     def logoThumb(self, obj):
         logo_url = get_thumbnailer(obj.logo)['logo_small'].url

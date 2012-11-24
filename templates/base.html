@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{{ STATIC_URL }}common/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}common/css/bootstrap-responsive.css" type="text/css" />
 
     <!-- More styles -->
     {% block additional-styles %}{% endblock %}
@@ -25,19 +26,13 @@
 <body>
     {% block content %}{% endblock %}
 
-    <!-- JS -->
+    <!-- Global JS -->
     <script type="text/javascript" src="{{ STATIC_URL }}common/js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}common/js/bootstrap.min.js"></script>
+    <!-- /Global JS -->
 
     <!-- More scripts -->
     {% block additional-scripts %}{% endblock %}
     <!-- /More scripts -->
-
-    <script type='text/javascript'>
-        $(function() {
-
-        });
-    </script>
-    <!-- /JS -->
 </body>
 </html>

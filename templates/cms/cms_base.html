@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
 
 {% block additional-styles %}
+    <!-- Additional styles for CMS  -->
     <link rel="stylesheet/less" href="{{ STATIC_URL }}cms/css/cms.less" type="text/css" />
+    <!-- /Additional styles for CMS  -->
+    {% block current-page-styles %}
+    {% endblock %}
 {% endblock%}
+
+{% block additional-scripts %}
+    <!-- Additional scripts for CMS  -->
+    <!-- /Additional scripts for CMS  -->
+    {% block current-page-scripts %}
+    {% endblock %}
+{% endblock %}
 
 {% block content %}
 <div id="cms_base" class="container">
